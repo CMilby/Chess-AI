@@ -1,0 +1,17 @@
+me\cmilby\graphql\GraphQLProvider.class
+me\cmilby\chess\piece\Queen.class
+me\cmilby\graphql\ChessDataFetcher$MoveArgs.class
+me\cmilby\Application.class
+me\cmilby\chess\Board.class
+me\cmilby\chess\piece\ChessPieceFactory.class
+me\cmilby\chess\piece\ChessPiece$Color.class
+me\cmilby\graphql\GraphQLUtil.class
+me\cmilby\chess\piece\Pawn.class
+me\cmilby\chess\piece\Knight.class
+me\cmilby\controllers\GraphQLController.class
+me\cmilby\chess\piece\Bishop.class
+me\cmilby\chess\piece\Rook.class
+me\cmilby\graphql\ChessDataFetcher.class
+me\cmilby\chess\piece\King.class
+me\cmilby\chess\piece\ChessPiece.class
+me\cmilby\chess\ChessMove.class

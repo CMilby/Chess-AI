@@ -1,0 +1,36 @@
+directive @fetch(from: String!) on FIELD_DEFINITION
+
+type Query {
+    possibleMoves(fen: String!): [ChessMove!]!
+    position(fen: String!, whiteAI: ChessAIType!, blackAI: ChessAIType!, maxMoveDepth: Int, moveDelay: Int = 500): ChessPosition!
+}
+
+type ChessPosition {
+    FEN: String!
+    possibleMoves: [ChessMove!]!
+    isInCheckmate: Boolean!
+    isStalemate: Boolean!
+}
+
+type ChessPiece {
+    piece: String!
+    color: String! @fetch(from: "getColorString")
+    rank: Int!
+    file: Int!
+}
+
+type ChessMove {
+    piece: ChessPiece!
+    capturesPiece: ChessPiece
+    pieceEndRank: Int!
+    pieceEndFile: Int!
+    capturesPieceEndRank: Int!
+    capturesPieceEndFile: Int!
+    canPromote: Boolean!
+    resultingFEN: String!
+}
+
+enum ChessAIType {
+    NONE
+    RANDOM_MOVE
+}

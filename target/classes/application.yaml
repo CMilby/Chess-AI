@@ -1,0 +1,5 @@
+graphql:
+  servlet:
+    enabled: true
+    cors-enabled: false
+    mapping: /graphql
