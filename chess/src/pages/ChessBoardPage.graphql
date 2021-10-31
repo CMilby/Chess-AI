@@ -1,0 +1,39 @@
+query getPosition(
+	$fen: String!
+	$whiteAI: ChessAIType!
+	$blackAI: ChessAIType!
+	$moveDelay: Int!
+	$maxMoveDepth: Int!
+) {
+	position(
+		fen: $fen
+		whiteAI: $whiteAI
+		blackAI: $blackAI
+		moveDelay: $moveDelay
+		maxMoveDepth: $maxMoveDepth
+	) {
+		FEN
+		possibleMoves {
+			piece {
+				piece
+				color
+				rank
+				file
+			}
+			capturesPiece {
+				piece
+				color
+				rank
+				file
+			}
+			pieceEndRank
+			pieceEndFile
+			capturesPieceEndRank
+			capturesPieceEndFile
+			canPromote
+			resultingFEN
+		}
+		isInCheckmate
+		isStalemate
+	}
+}

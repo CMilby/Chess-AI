@@ -1,0 +1,17 @@
+overwrite: true
+schema: ['../src/main/resources/schema.graphql']
+generates:
+    src/generated/graphql.tsx:
+        plugins:
+            - 'typescript'
+            - 'typescript-operations'
+            - 'typescript-urql'
+        documents:
+            [
+                'src/pages/*.{graphql,tsx,ts}',
+                'src/comoonents/*.{graphql,tsx,ts}',
+                'src/util/*.{graphql,tsx,ts}',
+            ]
+    introspection.json:
+        plugins:
+            - introspection
